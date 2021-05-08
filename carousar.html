@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="www.weddingwishlist.com/weddingwebsite/assets/css/bootstrap-4/bootstrap.min.css">
+  <style>
+  #header
+	{
+	position: initial !important;
+	padding: 0 !important;	
+	}
+	.navbar-brand{
+		width:auto !important;
+		height:auto !important;
+		max-width:none !important;
+	}
+	.countdown-section, .thanks-banner {
+    color: #B6060D !important;
+	text-align:center;
+	
+  }
+ 
+  .bottom-countdown, .countdown-value, .title{
+	font-size: 24px;
+    
+  }
+  .countdown-section{
+   width: 100%;
+   background-color: #df9f07;
+  }
+  .countdown-value{
+  width: 100px;
+  float: left;
+  }
+  .section-title{
+  padding: 0px 15px 22px 15px !important;
+  margin-bottom: 30px !important;
+  line-height: 1 !important;
+  color: #B6060D !important;
+  text-transform:uppercase;
+  font-weight:700;
+  Background:no-repeat bottom center;
+  letter-spacing: 5px;
+  text-align: center;
+  font-size:36px;
+  margin: 20px 0 0 0;
+  }
+  .event-img img{
+  width: 100%;
+  }
+  .image-1 {
+    border: 10px solid Black;
+    margin: 20px 0;
+	}
+#photo_gallery, .item img {
+	max-width: 100%;
+	height: auto;
+	padding: 0 10px 10px 0;
+	}
+.grid {
+max-width: 1000px;
+list-style: none;
+margin: 30px auto;
+padding:0;
+width: 100%;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 10px 10px 0;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+
+.container-functions {
+width: 90%;
+overflow:hidden;
+background: skyblue;
+margin: 20px auto;
+padding: 20px;
+}
+.container-functions ul {
+padding: 0px;
+margin: 0px;
+}
+.container-functions ul li {
+float:left;
+width:45%;
+height: 300px;
+margin: 20px;
+border: 1px solid red;
+font-size: 25px;
+
+}
+.container-functions ul li img{
+height: 300px;
+width:100%;
+}
+	
+	
+	</style>
+</head>
+<Body>
+ <!-- Navbar  -->
+
+	<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+          <div class="logo-container" style = "width:50px;height:60px">
+            <img src="logo.png" id="header-logo" alt="Website Logo" />
+          </div>
+        </a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#our_story">Home</a></li>
+      <li><a href="#functions">Functions</a></li>
+      <li><a href="#photo_gallery">Gallery</a></li>
+      <li><a href="#travel">Travel</a></li>
+    </ul>
+	
+  </div>
+  
+</nav>
+<section class="title" id="title">
+      <div class="wedding" style="text-align:center">
+        <h1 class="couple-name text-uppercase">MANSI & HARI</h1>
+        <div class="wedding-date text-capitalize">May 27,2021</div>
+        <div class="wedding-venue text-capitalize">Mumbai</div>
+      </div>
+    </section>
+ 
+    <!-- Header end -->
+
+	<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("dd").innerHTML = days;
+  document.getElementById("hh").innerHTML = hours;
+  document.getElementById("mm").innerHTML = minutes;
+  document.getElementById("ss").innerHTML = seconds;
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Today's the big day!";
+  }
+}, 1000);
+</script>
+
+	
+	<!-- Count Down Section Start -->
+    <section class="countdown-section" style="padding-left:150px">
+	<div class = "countdown-banner header-countdown">
+        <div class="countdown-value" style = "width:10%; padding-left:110px;padding-right:80px">
+          <div class="timer days"><span id = "dd"> </span></div>
+          <div class="title">Days</div>
+        </div>
+        <div class="countdown-value" style = "width:10%">
+          <div class="timer hours"><span id = "hh"> </span></div>
+          <div class="title">Hours</div>
+        </div>
+        <div class="countdown-value" style = "width:30%">
+          
+          Countdown<br>to our big day!
+        
+        </div>
+        <div class="countdown-value" style = "width:10%">
+          <div class="timer min"><span id = "mm"> </span></div>
+          <div class="title">Mins</div>
+        </div>
+        <div class="countdown-value" style = "width:10%">
+          <div class="timer sec"><span id = "ss"> </span></div>
+          <div class="title">Secs</div>
+        </div>
+      </div>
+      <div class="row today-banner d-none">
+    
+        <div class="col-xs-12"><span id = "demo"></span></div>
+      </div>
+      <div class="col-xs-12 text-center d-none">
+        Thank you for being a part of our big day! Below are some memories we'd love to share...
+      </div>
+    </section>
+    <!-- Count Down Section Ends-->
+
+</div>
+<div class="container">
+<div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+            <ol class="carousel-indicators"> 
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li> 
+                <li data-target="#myCarousel" data-slide-to="1"></li> 
+                <li data-target="#myCarousel" data-slide-to="2"></li> 
+            </ol> 
+  
+            <div class="carousel-inner"> 
+                <div class="item active" style="width:1200px;height:500px"> 
+                    <img alt="Slide1" src="img1.jpg"> 
+                </div> 
+  
+                <div class="item" style="width:1200px;height:500px"> 
+                    <img alt="Slide2" src="img2.jpg" width="100%">
+                </div> 
+  
+                <div class="item" style="width:1200px;height:500px"> 
+                    <img alt="Slide3" src="img3.jpg" width="100%"> 
+                </div> 
+            </div> 
+           
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"> 
+                <span class="glyphicon glyphicon-chevron-left"></span> 
+                <span class="sr-only">Previous</span> 
+            </a> 
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"> 
+                <span class="glyphicon glyphicon-chevron-right"></span> 
+                <span class="sr-only">Next</span> 
+            </a> 
+      </div> 
+</div>
+
+<section class="functions content-section" id="functions">
+    <div class="section-title">Functions</div>
+	<div class="container-functions">
+	<ul> 
+	<li><img src = "mehendi.jpg"></li>
+	<li style="text-align:center;"><h3 style= "text-align:center;font-size:30px;color:red"> Mehandi</h3>
+					July 19, 2021 <br>
+					10:00 AM <br>
+					Taj Mahal Palace Hotel, <br>
+					Colaba, Mumbai View Map <br>
+					Dress Code : Bright & bling <br></li>
+	</ul>
+	<ul> 
+	<li style="text-align:center;"><h3 style= "text-align:center;font-size:30px;color:red"> Sangeet</h3>
+					July 19, 2021 <br>
+					10:00 AM <br>
+					Taj Mahal Palace Hotel, <br>
+					Colaba, Mumbai View Map <br>
+					Dress Code : Bright & bling <br></li>
+	<li><img src = "Sangeet.jpg"></li>
+	
+	</ul>
+	<ul> 
+	<li><img src = "Haldi.jpg"></li>
+	<li style="text-align:center;"><h3 style= "text-align:center;font-size:30px;color:red"> Haldi</h3>
+					July 19, 2021 <br>
+					10:00 AM <br>
+					Taj Mahal Palace Hotel, <br>
+					Colaba, Mumbai View Map <br>
+					Dress Code : Bright & bling <br></li>
+	</ul>
+	<ul> 
+	<li style="text-align:center;"><h3 style= "text-align:center;font-size:30px;color:red"> Wedding</h3>
+					July 19, 2021 <br>
+					10:00 AM <br>
+					Taj Mahal Palace Hotel, <br>
+					Colaba, Mumbai View Map <br>
+					Dress Code : Bright & bling <br></li>
+	<li><img src = "Wedding.jpg"></li>
+	
+	</ul>
+	
+	</div>
+	
+</section>
+
+
+<!-- Gallery section Starts -->
+    <div class="content-section" id="photo_gallery">
+      <div class="container">
+        <div class="section-title">Gallery</div>
+        <div class="content-list">
+			<div class="section-content">Welcome to our gallery. Here's a peek into all the fun, celebrations and special moments from the journey.
+			We hope you enjoy it!
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="https://www.weddingwishlist.com/media/gallery/9116/9116_gallery_5df72002349b4.png">
+				<img src="https://www.weddingwishlist.com/media/gallery/9116/9116_gallery_5df72002349b4.png" width="600" height="400">
+				</a>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="https://www.weddingwishlist.com/media/gallery/9116/9116_gallery_5df72002ceb91.png">
+				<img src="https://www.weddingwishlist.com/media/gallery/9116/9116_gallery_5df72002ceb91.png" width="600" height="400">
+				</a>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="https://www.weddingwishlist.com/media/gallery/9116/9116_gallery_5df720037567d.png">
+				<img src="https://www.weddingwishlist.com/media/gallery/9116/9116_gallery_5df720037567d.png" width="600" height="400">
+				</a>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="https://www.weddingwishlist.com/media/gallery/9116/9116_gallery_5df72002349b4.png">
+				<img src="https://www.weddingwishlist.com/media/gallery/9116/9116_gallery_5df72002349b4.png" width="600" height="400">
+				</a>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="https://www.weddingwishlist.com/media/gallery/9116/9116_gallery_5df720a65591d.png">
+				<img src="https://www.weddingwishlist.com/media/gallery/9116/9116_gallery_5df720a65591d.png" width="600" height="400">
+				</a>
+				</div>
+			</div>
+        </div>
+        <div class=" section-content gallery-empty-content text-center">Couple has not shared any photos.</div>
+      </div>
+    </div>
+    <!-- Gallery section Ends -->
+</body>
+</html>
+
+
